@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('pets', function (Blueprint $table) {
+        Schema::create('animals', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('image_id')->nullable();
             $table->bigInteger('owner_id')->nullable();
