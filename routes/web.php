@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+
 });
+
+Route::get('/search', ['App\Http\Controllers\Search', 'search'])->name('owner.search');
+
+
