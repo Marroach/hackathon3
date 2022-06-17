@@ -9,16 +9,20 @@
                     
                     @if ($result->first_name)
                         
-                        <a href="/owner">
-                            {{$result->first_name}}
-                            {{$result->surname}}
-                        </a>
+                       
+                            <a href="/owner/{{$result->id}}">
+                                {{$result->first_name}}
+                                {{$result->surname}}
+                            </a>
+                        
                     @else
                             
-                        <a href="/pet">
-                            {{$result->name}}
-                        </a>
-                    @endif;
+                       
+                            <a href="/pet/{{$result->id}}">
+                                {{$result->name}}
+                            </a>
+                        
+                    @endif
                 </li>
             @endforeach
         </ul>

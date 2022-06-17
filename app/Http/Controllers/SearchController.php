@@ -7,7 +7,7 @@ use App\Models\Owner;
 use App\Models\Animal;
 
 
-class Search extends Controller
+class SearchController extends Controller
 {
     public function search(Request $request)
     {
