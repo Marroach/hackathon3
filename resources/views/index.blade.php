@@ -14,13 +14,16 @@
                 <br/>
                 <button>Search</button><br/>
                 <br/>
-                
-                Search by Pet:<br/>
-                <br/>
-                <input type="text" name="search-pet" value=""><br/>
-                <br/>
-                <button>Search</button>
             </div>
+        </form>
+        <form action="/search" method="get">
+            @csrf
+            Search by Pet:<br/>
+            <br/>
+            <input type="text" name="search-pet" value=""><br/>
+            <br/>
+            <button>Search</button>
+        
         </form>
     </div>
 

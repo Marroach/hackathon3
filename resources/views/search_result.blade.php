@@ -4,14 +4,21 @@
 
     <div class="result">
         <ul>
-            @foreach ($results as $result)
+            @foreach ($results as $key => $result)
                 <li>
-                       {{-- {{dd($result)}}  --}}
-                    <a href="/owner">
-                    {{$result->first_name}}
-                    {{$result->surname}}
-                    </a>
                     
+                    @if ($result->first_name)
+                        
+                        <a href="/owner">
+                            {{$result->first_name}}
+                            {{$result->surname}}
+                        </a>
+                    @else
+                            
+                        <a href="/pet">
+                            {{$result->name}}
+                        </a>
+                    @endif;
                 </li>
             @endforeach
         </ul>
