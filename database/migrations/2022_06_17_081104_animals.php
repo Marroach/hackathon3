@@ -13,7 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
+<<<<<<< HEAD:database/migrations/2022_06_17_081104_pets.php
         Schema::create('animals', function (Blueprint $table) {
+=======
+        Schema::table('animals', function (Blueprint $table) {
+>>>>>>> 125b1d7e92f32f35861e91d6dd487e628844193d:database/migrations/2022_06_17_081104_animals.php
             $table->id();
             $table->bigInteger('image_id')->nullable();
             $table->bigInteger('owner_id')->nullable();
