@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\petDetails;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/search', ['App\Http\Controllers\Search', 'search'])->name('owner.search');
+
+Route::get('/pet', [petDetails::class, 'show']);
 
 
