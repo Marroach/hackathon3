@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\SearchController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +22,11 @@ Route::get('/', function () {
 
 });
 
-Route::get('/search', ['App\Http\Controllers\Search', 'search'])->name('owner.search');
+Route::get('/search', ['App\Http\Controllers\SearchController', 'search'])->name('owner.search');
+
+Route::get('/owner/{id}', ['App\Http\Controllers\OwnerController', 'owner_result'])->name('owner.result');
+
+Route::get('/pet/{id}', ['App\Http\Controllers\AnimalController', 'pet_result'])->name('pet.result');
+
 
 
